@@ -10,7 +10,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class ApiInternaService {
-  private apiUrl = 'http://localhost/yamblet-project/backend/public/starwars/starships';
+  private apiUrl = 'https://robotdemn.000webhostapp.com/backend/public/starwars/starships';
   constructor(
     private http: Http
   ) { }

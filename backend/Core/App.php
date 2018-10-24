@@ -22,7 +22,7 @@ class App{
     private $_t_user = 'Guest';
 
     const NAMESPACE_CONTROLLERS = "\App\Controllers\Main\Api\\";
-    const CONTROLLERS_PATH = "../App/controllers/Main/Api/";
+    const CONTROLLERS_PATH = "../App/Controllers/Main/Api/";
     const LOGS_PATH = "../App/Logs/";
 
     /**
