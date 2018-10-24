@@ -1,0 +1,55 @@
+IP: ::1, Error in : Crud, Description: PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'starships_table.starships_table' doesn't exist in C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Models\CrudHelper\Crud.php:23
+Stack trace:
+#0 C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Models\CrudHelper\Crud.php(23): PDOStatement->execute()
+#1 C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Models\Starships\Starships.php(30): App\Models\CrudHelper\Crud::get('SELECT * FROM s...', Array)
+#2 C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Models\Starships\Starships.php(16): App\Models\Starships\Starships->getById()
+#3 C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Controllers\Helpers\Starships\Starships.php(16): App\Models\Starships\Starships->get()
+#4 C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Controllers\Main\Main.php(17): App\Controllers\Helpers\Starships\Starships->get()
+#5 C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Controllers\Main\Guest\Guest.php(62): App\Controllers\Main\Main->callMethod('get', Array, 'Starships\\Stars...')
+#6 C:\Users\ivanm\Documents\proyectos_web\php_mvc\Core\App.php(47): App\Controllers\Main\Guest\Guest->StarshipsSearch('get')
+#7 C:\Users\ivanm\Documents\proyectos_web\php_mvc\public\index.php(34): Core\App->__construct()
+#8 {main}, info_Received: id=1::action=get::, Url Received: (starships/search), date: 2018-10-24 14:44:32
+IP: ::1, Error in : Crud, Description: PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '=,pasajeros, capacidad_carga,suministros,relacion_impulsor) VALUES(NULL,NULL,NUL' at line 1 in C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Models\CrudHelper\CrudA.php:61
+Stack trace:
+#0 C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Models\CrudHelper\CrudA.php(61): PDOStatement->execute()
+#1 C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Models\CrudHelper\CrudA.php(50): App\Models\CrudHelper\CrudA->setData(Array, false)
+#2 C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Models\CrudHelper\CrudA.php(35): App\Models\CrudHelper\CrudA->implementCrud('INSERT INTO sta...', Array, false)
+#3 C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Controllers\Helpers\Starships\Starships.php(30): App\Models\CrudHelper\CrudA->update(Array, 'INSERT INTO sta...')
+#4 C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Controllers\Main\Main.php(17): App\Controllers\Helpers\Starships\Starships->add()
+#5 C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Controllers\Main\Guest\Guest.php(62): App\Controllers\Main\Main->callMethod('add', Array, 'Starships\\Stars...')
+#6 C:\Users\ivanm\Documents\proyectos_web\php_mvc\Core\App.php(47): App\Controllers\Main\Guest\Guest->StarshipsSearch('add')
+#7 C:\Users\ivanm\Documents\proyectos_web\php_mvc\public\index.php(34): Core\App->__construct()
+#8 {main}, info_Received: action=add::Is an Array with size of: 11 and with name keys of: (data), and with values of: (nombre,modelo,fabricante,costo,longitud,velocidad,tripulacion,pasajeros,capacidad_carga,suministros,relacion_impulsor), Url Received: (starships/search), date: 2018-10-24 15:16:55
+IP: ::1, Error in : Crud, Description: PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '=,pasajeros, capacidad_carga,suministros,relacion_impulsor) VALUES('nombre de na' at line 1 in C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Models\CrudHelper\CrudA.php:61
+Stack trace:
+#0 C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Models\CrudHelper\CrudA.php(61): PDOStatement->execute()
+#1 C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Models\CrudHelper\CrudA.php(50): App\Models\CrudHelper\CrudA->setData(Array, false)
+#2 C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Models\CrudHelper\CrudA.php(35): App\Models\CrudHelper\CrudA->implementCrud('INSERT INTO sta...', Array, false)
+#3 C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Controllers\Helpers\Starships\Starships.php(30): App\Models\CrudHelper\CrudA->update(Array, 'INSERT INTO sta...')
+#4 C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Controllers\Main\Main.php(17): App\Controllers\Helpers\Starships\Starships->add()
+#5 C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Controllers\Main\Guest\Guest.php(62): App\Controllers\Main\Main->callMethod('add', Array, 'Starships\\Stars...')
+#6 C:\Users\ivanm\Documents\proyectos_web\php_mvc\Core\App.php(47): App\Controllers\Main\Guest\Guest->StarshipsSearch('add')
+#7 C:\Users\ivanm\Documents\proyectos_web\php_mvc\public\index.php(34): Core\App->__construct()
+#8 {main}, info_Received: action=add::Is an Array with size of: 11 and with name keys of: (data), and with values of: (nombre,modelo,fabricante,costo,longitud,velocidad,tripulacion,pasajeros,capacidad_carga,suministros,relacion_impulsor), Url Received: (starships/search), date: 2018-10-24 15:17:44
+IP: ::1, Error in : Crud, Description: PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '=,pasajeros, capacidad_carga,suministros,relacion_impulsor) VALUES('nombre de na' at line 1 in C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Models\CrudHelper\CrudA.php:61
+Stack trace:
+#0 C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Models\CrudHelper\CrudA.php(61): PDOStatement->execute()
+#1 C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Models\CrudHelper\CrudA.php(50): App\Models\CrudHelper\CrudA->setData(Array, false)
+#2 C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Models\CrudHelper\CrudA.php(35): App\Models\CrudHelper\CrudA->implementCrud('INSERT INTO sta...', Array, false)
+#3 C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Controllers\Helpers\Starships\Starships.php(30): App\Models\CrudHelper\CrudA->update(Array, 'INSERT INTO sta...')
+#4 C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Controllers\Main\Main.php(17): App\Controllers\Helpers\Starships\Starships->add()
+#5 C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Controllers\Main\Guest\Guest.php(62): App\Controllers\Main\Main->callMethod('add', Array, 'Starships\\Stars...')
+#6 C:\Users\ivanm\Documents\proyectos_web\php_mvc\Core\App.php(47): App\Controllers\Main\Guest\Guest->StarshipsSearch('add')
+#7 C:\Users\ivanm\Documents\proyectos_web\php_mvc\public\index.php(34): Core\App->__construct()
+#8 {main}, info_Received: action=add::Is an Array with size of: 11 and with name keys of: (data), and with values of: (nombre,modelo,fabricante,costo,longitud,velocidad,tripulacion,pasajeros,capacidad_carga,suministros,relacion_impulsor), Url Received: (starships/search), date: 2018-10-24 15:18:29
+IP: ::1, Error in : Crud, Description: PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Models\CrudHelper\CrudA.php:61
+Stack trace:
+#0 C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Models\CrudHelper\CrudA.php(61): PDOStatement->execute()
+#1 C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Models\CrudHelper\CrudA.php(50): App\Models\CrudHelper\CrudA->setData(Array, false)
+#2 C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Models\CrudHelper\CrudA.php(35): App\Models\CrudHelper\CrudA->implementCrud('UPDATE starship...', Array, false)
+#3 C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Controllers\Helpers\Starships\Starships.php(46): App\Models\CrudHelper\CrudA->update(Array, 'UPDATE starship...')
+#4 C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Controllers\Main\Main.php(17): App\Controllers\Helpers\Starships\Starships->update()
+#5 C:\Users\ivanm\Documents\proyectos_web\php_mvc\App\Controllers\Main\Guest\Guest.php(62): App\Controllers\Main\Main->callMethod('update', Array, 'Starships\\Stars...')
+#6 C:\Users\ivanm\Documents\proyectos_web\php_mvc\Core\App.php(47): App\Controllers\Main\Guest\Guest->StarshipsSearch('update')
+#7 C:\Users\ivanm\Documents\proyectos_web\php_mvc\public\index.php(34): Core\App->__construct()
+#8 {main}, info_Received: action=update::id=2::Is an Array with size of: 11 and with name keys of: (data), and with values of: (nombre,modelo,fabricante,costo,longitud,velocidad,tripulacion,pasajeros,capacidad_carga,suministros,relacion_impulsor), Url Received: (starships/search), date: 2018-10-24 15:25:14

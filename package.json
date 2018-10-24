@@ -1,0 +1,12 @@
+{
+  "name": "yamblet",
+  "version": "1.0.0",
+  "description": "Yamblet Project",
+  "main": "index.js",
+  "scripts": {
+    "angular-s": "cd frontend/app-angular && ng serve --open"
+  },
+  "keywords": [],
+  "author": "José Iván Martinez Larios",
+  "license": "ISC"
+}

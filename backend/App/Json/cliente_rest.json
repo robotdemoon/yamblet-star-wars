@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "4191a265-104e-407b-979c-6da901cf01db",
+		"name": "yamblet",
+		"description": "API Interna",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api rest",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": false
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "d",
+							"value": "{\"id\":3,\"action\":\"get\"}",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "d",
+							"value": "{\"id\":0,\"action\":\"getAll\"}",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "d",
+							"value": "{\"action\":\"add\", \"data\":{\"nombre\":\"nombre de nave 3\",\"modelo\":\"modelo de nave 3\",\"fabricante\":\"fabricante 3\",\"costo\":\"10000.00\",\"longitud\":\"146.00\",\"velocidad\":\"1209.00\",\"tripulacion\":\"10\",\"pasajeros\":\"100\",\"capacidad_carga\":\"10000\",\"suministros\":\"2\",\"relacion_impulsor\":\"1\"}}",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "d",
+							"value": "{\"action\":\"update\",\"id\":6,\"data\":{\"nombre\":\"nombre de nave 1 a 10\",\"modelo\":\"modelo de nave 1 a 10\",\"fabricante\":\"fabricante 1 a 10\",\"costo\":\"10000.00\",\"longitud\":\"146.00\",\"velocidad\":\"1209.00\",\"tripulacion\":\"10\",\"pasajeros\":\"100\",\"capacidad_carga\":\"10000\",\"suministros\":\"2\",\"relacion_impulsor\":\"1\"}}",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "d",
+							"value": "{\"action\":\"remove\", \"id\":6}",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/php_mvc/public/starwars/starships",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"php_mvc",
+						"public",
+						"starwars",
+						"starships"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
