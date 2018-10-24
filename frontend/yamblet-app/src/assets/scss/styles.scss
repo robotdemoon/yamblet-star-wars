@@ -1,0 +1,31 @@
+@charset 'utf-8';
+/*------------------------------------
+Importamos los abstracts
+------------------------------------*/
+@import 'abstracts/_variables.scss',
+		'abstracts/_mixins.scss';
+
+/*------------------------------------
+Importamos el layout
+------------------------------------*/
+@import 'layout/_grid.scss',
+		'layout/_header.scss',
+		'layout/_navleft.scss',
+		'layout/_breadcrumb.scss';
+
+/*------------------------------------
+Importamos los componentes
+------------------------------------*/
+@import 'components/_text.scss',
+		'components/_titles.scss',
+		'components/_global.scss';
+
+/*------------------------------------
+Importamos los estilos de paginas
+------------------------------------*/
+
+
+/*------------------------------------
+Importamos las querys necesarias
+------------------------------------*/
+@import '_querys.scss';

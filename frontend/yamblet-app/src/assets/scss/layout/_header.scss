@@ -1,0 +1,52 @@
+/*------------------------------------
+Estios de Header
+------------------------------------*/
+.yamblet-header{
+    position:relative;
+    background-image: url('../images/base/header.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: bottom;
+    &:before{
+        content:"";
+        position: absolute;
+        top:0;
+        left:0;
+        height: 100%;
+        width:100%;
+        background: rgba(0,0,0,0.7);
+    }
+    &-logo{
+        position: absolute;
+        top:20px;
+        left: 20px;
+        width: 70px;
+    }
+    &-title{
+        position:absolute;
+        top: 80px;
+        left:0;
+        width: 100%;
+        text-align:center;
+        color: rgba(254,254, 254, 0.9);
+        h1{
+            position:relative;
+            padding-bottom: 0.5rem;
+            width: 60%;
+            min-width: 320px;
+            margin:auto;
+            &:after{
+                content:"";
+                height: 2px;
+                width: 100%;
+                position: absolute;
+                bottom:0;
+                left:0;
+                min-width: 300px;
+                background:rgba(254,254, 254, 0.7);
+            }
+        }
+    }
+}
+

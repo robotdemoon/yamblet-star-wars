@@ -1,0 +1,63 @@
+<div class="yamblet-m-bread">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb yamblet-breadcrumb">
+      <li class="breadcrumb-item"><a routeLink="/">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page" *ngIf="starship" >Información de {{starship.name}}</li>
+    </ol>
+  </nav>
+</div>
+<div class="yamblet-m-content" *ngIf="idStarship">
+<div class="row">
+    <div class="col-xs-12 col-md-3 col-xl-2 mb-2">
+      <app-nav-externo></app-nav-externo>
+    </div>
+    <div class="col-xs-12 col-md-9 col-xl-10">
+      <div class="row">
+        <div class="col-xs-12">
+          <h3 class="yamblet-title-main">{{starship.name}}</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-lg-6">
+          <p class="yamblet-text-flex"><strong>Modelo:</strong> <span class="font-weight-ligth">{{starship.model}}</span></p>
+        </div>
+        <div class="col-xs-12 col-lg-6">
+            <p class="yamblet-text-flex"><strong>Fabricante:</strong> <span class="font-weight-ligth">{{starship.manufacturer}}</span></p>
+        </div>
+        <div class="col-xs-12 col-md-6 col-xl-4" *ngIf="starship.cost_in_credits !== 'unknown'">
+            <p class="yamblet-text-flex"><strong>Costo:</strong> <span class="font-weight-ligth">{{starship.cost_in_credits || 0}} USD</span></p>
+        </div>
+        <div class="col-xs-12 col-md-6 col-xl-4" *ngIf="starship.length !== 'unknown'">
+            <p class="yamblet-text-flex"><strong>Longitud:</strong> <span class="font-weight-ligth">{{starship.length}} ft</span></p>
+        </div>
+        <div class="col-xs-12 col-md-6 col-xl-4" *ngIf="starship.max_atmosphering_speed !== 'unknown'">
+            <p class="yamblet-text-flex"><strong>Velocidad:</strong> <span class="font-weight-ligth">{{starship.max_atmosphering_speed}} Knts</span></p>
+        </div>
+        <div class="col-xs-12 col-md-6 col-xl-4" *ngIf="starship.crew !== 'unknown'">
+            <p class="yamblet-text-flex"><strong>Tripulacion:</strong> <span class="font-weight-ligth">{{starship.crew}}</span></p>
+        </div>
+        <div class="col-xs-12 col-md-6 col-xl-4" *ngIf="starship.passengers !== 'unknown'">
+            <p class="yamblet-text-flex"><strong>Pasajeros:</strong> <span class="font-weight-ligth">{{starship.passengers}}</span></p>
+        </div>
+        <div class="col-xs-12 col-md-6 col-xl-4" *ngIf="starship.cargo_capacity !== 'unknown'">
+            <p class="yamblet-text-flex"><strong>Capacidad de Carga</strong> <span class="font-weight-ligth">{{starship.cargo_capacity}}</span></p>
+        </div>
+        <div class="col-xs-12 col-md-6 col-xl-4" *ngIf="starship.consumables !== 'unknown'">
+            <p class="yamblet-text-flex"><strong>Recursos/Consumibles:</strong> <span class="font-weight-ligth">{{starship.consumables}}</span></p>
+        </div>
+        <div class="col-xs-12 col-md-6 col-xl-4" *ngIf="starship.hyperdrive_rating !== 'unknown'">
+            <p class="yamblet-text-flex"><strong>Relacion del Hiperimpulsor:</strong> <span class="font-weight-ligth">{{starship.hyperdrive_rating}}</span></p>
+        </div>
+        <div class="col-xs-12 col-md-6 col-xl-4" *ngIf="starship.MGLT !== 'unknown'">
+            <p class="yamblet-text-flex"><strong>MGLT:</strong> <span class="font-weight-ligth text-center">{{starship.MGLT}}</span></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-2 ml-auto">
+            <button type="button" class="btn btn-dark mr-2" routerLink="/nave/{{idStarship}}/add"><i class="fas fa-plus"></i> Add</button>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+

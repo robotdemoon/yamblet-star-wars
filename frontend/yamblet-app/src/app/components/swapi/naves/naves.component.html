@@ -1,0 +1,31 @@
+<div class="yamblet-m-bread">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb yamblet-breadcrumb">
+      <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page" >Naves de Pelicula</li>
+    </ol>
+  </nav>
+</div>
+<div class="yamblet-m-content">
+<div class="row">
+  <div class="col-xs-12 col-md-3 col-xl-2 mb-2">
+    <app-nav-externo></app-nav-externo>
+  </div>
+  <div class="col-xs-12 col-md-9 col-xl-10">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nave</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let starship of starships; let i = index" routerLink="/nave/{{starship.id}}">
+          <th scope="row">{{i + 1}}</th>
+          <td>Mostrar mas información de <strong>{{starship.name}}</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>

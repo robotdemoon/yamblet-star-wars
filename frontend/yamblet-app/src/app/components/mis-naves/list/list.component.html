@@ -1,0 +1,38 @@
+<div class="yamblet-m-bread" >
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb yamblet-breadcrumb">
+      <li class="breadcrumb-item"><a routerLink="/mis-naves">Mis Naves</a></li>
+    </ol>
+  </nav>
+</div>
+<div class="yamblet-m-content">
+<div class="row" *ngIf="starships">
+  <div class="col-xs-12 col-md-3 col-xl-2 mb-2">
+    <app-nav-interno></app-nav-interno>
+  </div>
+  <div class="col-xs-12 col-md-9 col-xl-10">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Nave</th>
+          <th scope="col">Modelo</th>
+          <th scope="col" class="yamblet-see-column">Fabricante</th>
+          <th scope="col">Consultar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let starship of starships; let i = index">
+          <th scope="row">{{i + 1}}</th>
+          <td>{{starship.nombre}}</td>
+          <td>{{starship.modelo}}</td>
+          <td class="yamblet-see-column">{{starship.fabricante}}</td>
+          <td>
+            <button type="button" class="btn btn-dark" routerLink="/mis-naves/{{starship.id}}">Ver mas</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>

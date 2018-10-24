@@ -1,0 +1,40 @@
+<div class="yamblet-m-bread">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb yamblet-breadcrumb">
+      <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+    </ol>
+  </nav>
+</div>
+<div class="yamblet-m-content">
+  <div class="row">
+    <div class="col-xs-12 col-md-3 col-xl-2 mb-2">
+        <app-nav-externo></app-nav-externo>
+    </div>
+    <div class="col-xs-12 col-md-9 col-xl-10">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Episodio</th>
+            <th scope="col">Pelicula</th>
+            <th scope="col" class="yamblet-see-column">Descripción</th>
+            <th scope="col">Director</th>
+            <th scope="col" class="yamblet-see-column">Productor</th>
+            <th scope="col" class="yamblet-see-column">Lanzamiento</th>
+            <th scope="col">Consultar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let film of films">
+            <th scope="row">{{film.episode_id}}</th>
+            <td>{{film.title}}</td>
+            <td class="yamblet-see-column">{{film.opening_crawl}}</td>
+            <td>{{film.director}}</td>
+            <td class="yamblet-see-column">{{film.producer}}</td>
+            <td class="yamblet-see-column">{{film.release_date}}</td>
+            <td><button type="button" class="btn btn-dark" routerLink="/naves/{{film.episode_id}}">Naves</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

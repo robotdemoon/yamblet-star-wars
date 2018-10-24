@@ -1,0 +1,54 @@
+/*------------------------------------
+Mixin para ancho y altura
+------------------------------------*/
+@mixin size_f($h, $w:$h, $m:'no', $p:'no'){
+    @if $h != 'no'{
+        height: $h;
+    }
+    @if $w != 'no'{
+        width: $w;
+    }
+    @if $m != 'no'{
+        margin: $m;
+    }
+    @if $p != 'no'{
+        padding: $p;
+    }
+}
+@mixin border($ancho:1px, $color: #242424, $lighten: 70, $radius: 3px) {
+    border:  $ancho solid lighten($color, $lighten);
+    @if $radius != 'no' {
+        border-radius: $radius;
+    }
+}
+
+@mixin position($t, $r, $b, $l, $position: absolute){
+    position: $position;
+    @if $t != 'no' {
+        top: $t;
+    }
+    @if $r != 'no' {
+        right: $r;
+    }
+   @if $b != 'no' {
+        bottom: $b;
+    }
+    @if $l != 'no' {
+        left: $l;
+    }
+}
+@mixin flex($direction, $wrap, $justify, $align) {
+    display: flex;
+    @if $justify != 'no' {
+        justify-content: $justify;
+    }
+    @if $align != 'no' {
+        align-items: $align;
+    }
+    @if $direction != 'no' {
+        flex-direction: $direction;
+    }
+    @if $wrap != 'no' {
+        flex-wrap: $wrap;
+    }
+}

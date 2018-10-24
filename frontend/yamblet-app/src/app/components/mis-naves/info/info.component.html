@@ -1,0 +1,63 @@
+<div class="yamblet-m-bread">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb yamblet-breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/mis-naves">Mis Naves</a></li>
+      <li class="breadcrumb-item active" aria-current="page" *ngIf="starship">Informacion de {{starship.nombre}}</li>
+    </ol>
+  </nav>
+</div>
+<div class="yamblet-m-content">
+<div class="row" *ngIf="starship">
+    <div class="col-xs-12 col-md-3 col-xl-2 mb-2">
+      <app-nav-interno></app-nav-interno>
+    </div>
+    <div class="col-xs-12 col-md-9 col-xl-10">
+      <div class="row">
+        <div class="col-xs-12">
+          <h3 class="yamblet-title-main">{{starship.nombre}}</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-lg-6">
+          <p class="yamblet-text-flex"><strong>Modelo:</strong> <span class="font-weight-ligth">{{starship.modelo}}</span></p>
+        </div>
+        <div class="col-xs-12 col-lg-6">
+            <p class="yamblet-text-flex"><strong>Fabricante:</strong> <span class="font-weight-ligth">{{starship.fabricante}}</span></p>
+        </div>
+        <div class="col-xs-12 col-md-6 col-xl-4">
+            <p class="yamblet-text-flex"><strong>Costo:</strong> <span class="font-weight-ligth">{{starship.costo}} USD</span></p>
+        </div>
+        <div class="col-xs-12 col-md-6 col-xl-4">
+            <p class="yamblet-text-flex"><strong>Longitud:</strong> <span class="font-weight-ligth">{{starship.longitud}} ft</span></p>
+        </div>
+        <div class="col-xs-12 col-md-6 col-xl-4">
+            <p class="yamblet-text-flex"><strong>Velocidad:</strong> <span class="font-weight-ligth">{{starship.velocidad}} Knts</span></p>
+        </div>
+        <div class="col-xs-12 col-md-6 col-xl-4">
+            <p class="yamblet-text-flex"><strong>Tripulacion:</strong> <span class="font-weight-ligth">{{starship.tripulacion}}</span></p>
+        </div>
+        <div class="col-xs-12 col-md-6 col-xl-4">
+            <p class="yamblet-text-flex"><strong>Pasajeros:</strong> <span class="font-weight-ligth">{{starship.pasajeros}}</span></p>
+        </div>
+        <div class="col-xs-12 col-md-6 col-xl-4">
+            <p class="yamblet-text-flex"><strong>Capacidad de Carga</strong> <span class="font-weight-ligth">{{starship.capacidad_carga}} lb</span></p>
+        </div>
+        <div class="col-xs-12 col-md-6 col-xl-4">
+            <p class="yamblet-text-flex"><strong>Recursos/Consumibles:</strong> <span class="font-weight-ligth">{{starship.suministros}}</span></p>
+        </div>
+        <div class="col-xs-12 col-md-6 col-xl-4">
+            <p class="yamblet-text-flex"><strong>Hiperimpulsor:</strong> <span class="font-weight-ligth">{{starship.relacion_impulsor}}</span></p>
+        </div>
+        <div class="col-xs-12 col-md-6 col-xl-4">
+            <p class="yamblet-text-flex"><strong>MLGT:</strong> <span class="font-weight-ligth text-center">75</span></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-4 ml-auto">
+            <button type="button" class="btn btn-danger mr-2" (click)="deleteStarship()"><i class="fas fa-times"></i> Delete </button>
+            <button type="button" class="btn btn-dark mr-2" routerLink="/mis-naves/{{starship.id}}/edit"><i class="fas fa-pencil-alt"></i> Edit </button>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
