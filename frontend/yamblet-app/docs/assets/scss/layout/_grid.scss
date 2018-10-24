@@ -1,0 +1,58 @@
+/*------------------------------------
+Clases de contenedores
+------------------------------------*/
+.usv-mcontainer{
+	width: calc(100% - 1rem);
+	margin: 1rem auto;
+}
+
+/*------------------------------------
+Distribución global
+------------------------------------*/
+.yamblet-m{
+    &-header{
+        grid-area: header;
+        box-shadow:1px 1px 12px 0 $main-color;
+        height: 200px;
+    }
+    &-bread{
+        height: 50px;
+        width: calc(100% - 1rem);
+        margin:0.5rem auto 0 auto;
+    }
+    &-content{
+        @include size_f(calc(100% - 2rem), calc(100% - 1rem), 0.5rem auto 0.5rem auto);
+        max-width: 1200px;
+        padding: 1rem;
+        background: white;
+        box-shadow: 1px 1px 6px 0px $main-color;
+        border-radius: 5px;
+    }
+    &-mcontainer{
+        @include size_f(auto, 100%, 0.5rem auto 0.5rem auto);
+        min-height: calc(100vh - 200px - 50px - 1.5rem);
+        grid-area: main;
+        border:1px;
+    }
+    &-footer{
+        height: 50px;
+        width: calc(100 - 1rem);
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0.5rem 0.5rem 0.5rem;
+        background:#e9ecef;
+        color:lighten($main-color, 40);
+        border-radius: 5px;
+        grid-area: footer;
+    }
+    &-parent{
+        max-width: 100vw;
+        display: grid;
+        grid-template-areas: 
+            'header header header header header header header header header header'
+            'main main main main main main main main main main'
+            'main main main main main main main main main main'
+            'footer footer footer footer footer footer footer footer footer footer';
+    }
+}
