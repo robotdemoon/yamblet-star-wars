@@ -5,5 +5,5 @@ Se maqueto en Adobe XD y los estilos fueron generados en SASS y Bootstrap 4.
 
 Se puede ver el Ejercicio en la siguiente liga:
 
-https://goo.gl/u2zi4F
+https://robotdemn.000webhostapp.com/
 
