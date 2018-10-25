@@ -5,5 +5,4 @@ Se maqueto en Adobe XD y los estilos fueron generados en SASS y Bootstrap 4.
 
 Se puede ver el Ejercicio en la siguiente liga:
 
-https://robotdemn.000webhostapp.com/
-
+<a href="https://robotdemn.000webhostapp.com/">Ir a Ejercicio Online</a>
